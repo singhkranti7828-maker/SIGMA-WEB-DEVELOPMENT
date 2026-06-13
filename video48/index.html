@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.cantainer{
+    height: 80vh;
+    width: 100vw;
+    background-color: pink;
+    position: relative;
+}
+.box{
+    background-color: grey;
+    height: 100px;
+    width: 100px;
+ position: absolute;
+bottom:0;
+border-radius: 50%;
+animation: animater 3s ease-out infinite alternate, animatey 1s ease-out infinite alternate;
+}
+@keyframes animater{
+from{
+    left: 0;
+}
+to{
+    left: 100%;
+}
+}
+@keyframes animatey{
+
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="cantainer">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

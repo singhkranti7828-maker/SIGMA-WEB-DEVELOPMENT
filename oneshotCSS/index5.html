@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            
+        }
+        div{
+            height: 100px;
+width: 100px;
+display: inline-block;
+border: 2px solid black
+        }
+        #cantainer{
+            width: 400px;
+            height: 600px;
+            display: flex;
+            /* flex-direction: column-reverse; */
+            flex-direction: row;
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            justify-content: center;
+            /* justify-content: space-around; */
+
+            /* flex-wrap: wrap; */
+            align-items: center;
+        /* align-content: center; */
+        }
+        .box1{
+            background-color: bisque;
+            flex-grow: 1;
+        
+        }
+        .box2{
+            background-color: palegreen;
+            height: 200px;
+            flex-shrink: 0.5;
+            flex-grow: 2;
+
+        }
+        .box3{
+            background-color: blueviolet;
+            height: 75px;
+             
+        }
+        .box4{
+            background-color: brown;
+             
+        }
+    </style>
+</head>
+<body>
+    <h1>flexbox playout</h1>
+    <div id="cantainer">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+       
+</body>
+</html>

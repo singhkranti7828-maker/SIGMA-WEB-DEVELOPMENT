@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Stars Kids Fashion</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Fredoka',sans-serif;
+}
+
+body{
+background:#fff8fc;
+}
+
+header{
+background:linear-gradient(135deg,#ff9ecf,#ffd166);
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:600;
+color:white;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin:0 12px;
+font-size:18px;
+}
+
+.search-box{
+padding:10px;
+border:none;
+border-radius:25px;
+width:220px;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+background:linear-gradient(to bottom,#fff8fc,#fff);
+}
+
+.hero h1{
+font-size:55px;
+color:#ff5c8d;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+color:#666;
+margin-bottom:20px;
+}
+
+.hero button{
+background:#ff5c8d;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:30px;
+cursor:pointer;
+font-size:18px;
+transition:.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+}
+
+.categories{
+padding:50px 5%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+color:#ff5c8d;
+margin-bottom:30px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+text-align:center;
+}
+
+.card h3{
+color:#444;
+}
+
+.price{
+color:#ff5c8d;
+font-size:22px;
+margin:10px 0;
+}
+
+.btn{
+background:#ff9ecf;
+border:none;
+padding:10px 20px;
+border-radius:25px;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+background:#ff5c8d;
+}
+
+.cart{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#ff5c8d;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+font-size:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.about{
+padding:60px 10%;
+text-align:center;
+background:#fff0f7;
+}
+
+.about p{
+font-size:18px;
+color:#555;
+margin-top:15px;
+}
+
+.contact{
+padding:60px 10%;
+}
+
+.contact form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact input,
+.contact textarea{
+padding:15px;
+border:2px solid #ffd4e6;
+border-radius:15px;
+}
+
+.contact button{
+background:#ff5c8d;
+color:white;
+border:none;
+padding:15px;
+border-radius:15px;
+cursor:pointer;
+}
+
+footer{
+background:#ff9ecf;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.4);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+border-radius:20px;
+width:320px;
+}
+
+.modal-content input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.modal-content button{
+width:100%;
+padding:12px;
+background:#ff5c8d;
+color:white;
+border:none;
+border-radius:10px;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:22px;
+}
+
+@media(max-width:768px){
+header{
+flex-direction:column;
+gap:10px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.search-box{
+width:100%;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">🌟 Little Stars</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#girls">Girls</a>
+<a href="#boys">Boys</a>
+<a href="#baby">Baby Wear</a>
+<a href="#" onclick="openModal('login')">Login</a>
+<a href="#" onclick="openModal('signup')">Signup</a>
+</nav>
+
+<input
+type="text"
+class="search-box"
+id="search"
+placeholder="Search clothes..."
+onkeyup="searchProducts()">
+</header>
+
+<section class="hero">
+<h1>Cute Fashion For Little Stars ✨</h1>
+<p>Adorable dresses, comfy outfits and baby wear.</p>
+<button>Shop Now</button>
+</section>
+
+<section class="categories" id="girls">
+<h2 class="section-title">🎀 Girls Collection</h2>
+
+<div class="products">
+
+<div class="card product">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800">
+<div class="card-content">
+<h3>Princess Pink Dress</h3>
+<div class="price">₹999</div>
+<button class="btn" onclick="addCart()">Add To Cart</button>
+</div>
+</div>
+
+<div class="card product">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800">
+<div class="card-content">
+<h3>Rainbow Party Dress</h3>
+<div class="price">₹1299</div>
+<button class="btn" onclick="addCart()">Add To Cart</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="categories" id="boys">
+<h2 class="section-title">🧸 Boys Collection</h2>
+
+<div class="products">
+
+<div class="card product">
+<img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800">
+<div class="card-content">
+<h3>Cool Summer Outfit</h3>
+<div class="price">₹899</div>
+<button class="btn" onclick="addCart()">Add To Cart</button>
+</div>
+</div>
+
+<div class="card product">
+<img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800">
+<div class="card-content">
+<h3>Adventure T-Shirt Set</h3>
+<div class="price">₹799</div>
+<button class="btn" onclick="addCart()">Add To Cart</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="categories" id="baby">
+<h2 class="section-title">👶 Baby Wear</h2>
+
+<div class="products">
+
+<div class="card product">
+<img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800">
+<div class="card-content">
+<h3>Baby Bunny Outfit</h3>
+<div class="price">₹699</div>
+<button class="btn" onclick="addCart()">Add To Cart</button>
+</div>
+</div>
+
+<div class="card product">
+<img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?w=800">
+<div class="card-content">
+<h3>Soft Cotton Romper</h3>
+<div class="price">₹599</div>
+<button class="btn" onclick="addCart()">Add To Cart</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="about">
+<h2 class="section-title">💖 Why Choose Us?</h2>
+<p>
+Premium quality fabrics, cute designs, affordable prices,
+and happy little customers.
+</p>
+</section>
+
+<section class="contact">
+<h2 class="section-title">📞 Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 Little Stars Kids Fashion</p>
+<p>hello@littlestars.com</p>
+</footer>
+
+<div class="cart">
+🛒 Cart: <span id="cartCount">0</span>
+</div>
+
+<div class="modal" id="login">
+<div class="modal-content">
+<span class="close" onclick="closeModal('login')">&times;</span>
+<h2>Login</h2>
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<button>Login</button>
+</div>
+</div>
+
+<div class="modal" id="signup">
+<div class="modal-content">
+<span class="close" onclick="closeModal('signup')">&times;</span>
+<h2>Signup</h2>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<button>Create Account</button>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variable</title>
+    <style>
+        :root{
+    --color: hotpink;
+            --Seccolor: grey;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        ul{
+            display: flex;
+        }
+    ul li{
+        list-style: none;
+        padding: 20px;
+         border: 2px solid var(--Seccolor);
+    }
+    ul li:first-child{
+        --color: orange;
+        background-color: var(--color);
+       
+    }
+.container{
+    background-color:var(--Seccolor)
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>cantact</li>
+        </ul>
+    </div>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolore debitis totam sapiente, ipsum cupiditate 
+        officiis voluptates culpa rerum error delectus! Vero assumenda libero maxime sequ
+        i ea veniam nulla ipsa fugiat odio labore nam voluptate
+         optio quidem 
+        at velit, repellendus consectetur illum repudiandae cupiditate quae!</div>
+</body>
+</html>

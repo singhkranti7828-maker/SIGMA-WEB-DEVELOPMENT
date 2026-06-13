@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+.cantainer{
+ height: 50vh;
+ width: 40vw;
+ background-color: blueviolet;
+}
+.box{
+width: 4vw;
+height: 3vh;
+background-color: aquamarine;
+/* animation-name: gaurikaanimation;
+animation-duration: 10s;
+animation-iteration-count: 3;
+animation-timing-function:ease;
+animation-delay: 2s;
+animation-direction: reverse; */
+animation: gaurikaanimation 1s ease-in-out 1s 4 forwards;
+}
+@keyframes gaurikaanimation{
+    from{
+
+    }
+    to{
+        transform: translateX(100px);
+    }
+}
+    </style>
+</head>
+<body>
+     <div class="cantainer">
+        <div class="box translate">box</div>
+    </div>
+</body>
+</html>

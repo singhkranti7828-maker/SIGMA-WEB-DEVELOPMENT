@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+               background-color: pink;
+    height: 100px;
+    width: 100px;
+    border: 2px solid;
+    /* border-radius: 50%; */
+ 
+    /* transition: all 2s  linear 1s; */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation-name: gauri;
+    animation-delay: 0.25s;
+    animation-duration: 1s;
+    /* animation-timing-function: ease-in; */
+    animation-iteration-count: 10;
+   
+        }
+        @keyframes gauri{
+            from{
+font-size:20px;
+background-color: brown;
+left: 0px;
+            }
+            to{
+font-size:100px;
+background-color: rebeccapurple;
+left: 200px;
+ /* transform: rotate(360deg) scale(3) skew(30deg); */
+            }
+        }
+        div:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>&hearts;</div>
+    
+</body>
+</html>

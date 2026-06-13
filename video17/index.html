@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector in css</title>
+    <style>
+        /* element selectors */
+        div{
+            background-color: rgb(123, 68, 77);
+        }
+        /* class selector */
+        .pink{
+            background-color: pink;
+        }
+        /* id selector */
+        #green{
+            background-color: green;
+        }
+        /* child selector */
+        div > p{
+            color: yellowgreen;
+            background-color: orange;
+        }
+        /* universal selector */
+        *{
+
+            margin: 0;
+            padding: 0;
+        }
+        /* pseudo selector */
+        a:visited{
+            color:palevioletred
+        }
+        a:link{
+            color:red;
+        }
+
+    </style>
+</head>  
+<body>
+    <div class="pink">i am a selector
+
+    </div>
+    <div>
+        good
+        <p>i am a para inside div</p>
+    </div>
+<div id="green">
+    i am gauri
+</div>
+<a href="https://www.google.com"> go to goole</a>
+<br>
+<a href="https://www.instagram.com">insta</a>
+</body>
+</html>

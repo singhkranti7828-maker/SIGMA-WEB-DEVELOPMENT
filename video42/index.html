@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transfrom</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+.box{
+    height: 50px;
+    width: 50px;
+    background-color: peru;
+    border: 2px solid;
+    /* transform: rotate(60deg); */
+    /* text-align: center; */
+    /* transform: scaleX(1.6) */
+    /* transform: skewx(34deg) */
+    transform: translatey(100%) skewY(40deg) translatex(45%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cantainer{
+    width: 100vw;
+    height: 80vh;
+    border: 2px solid purple;
+}
+    </style>
+</head>
+<body>
+    <div class="cantainer">
+        <div class="box">box
+
+        </div>
+    </div>
+</body>
+</html>

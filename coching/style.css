@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+  
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+#img1{
+height: 100px;
+width: 100px;
+border: 2px solid black;
+border-radius: 50px;
+
+
+}
+#img2{
+height: 100px;
+width: 100px;
+border: 2px solid black;
+border-radius: 10px;
+}
+
